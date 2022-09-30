@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #0A0E21;
+}
+
+.titulo{
+    margin-top: 50px;
+    color: white;
+}
+
+.fondoItem
+{
+    background-color: #FF111328;
+    border-radius: 20px;
+    height: 130px;
+    color: white;
+}
+
+.btnColor{
+    background-color: #FF3366;
+    border-color: #FF3366;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.sexo{
+    font-size: 40px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.estiloNum{
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: -30px;
+}
+
+.cm{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -10px;
+}
+
+.form-range{
+    padding: 0px 20px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    background: #FF3366;
+}
+
+.botonRestPlus{
+    cursor: pointer;
+}
+
+.sexoDesactivo{
+    background-color: #7D2F1111;
+}

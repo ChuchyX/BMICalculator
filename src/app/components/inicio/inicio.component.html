@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+            <h1 class="titulo">BMI Calculator</h1>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 5px;">
+        <div class="col-lg-3 offset-lg-3">
+            <div [ngClass]="masculino ? 'fondoItem' : 'fondoItem sexoDesactivo'">
+                <div class="contenedor" style="cursor: pointer;" (click)="sexoActivo('masculino')">
+                    <i class="fas fa-mars sexo"></i>
+                    <p>Masculino</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div [ngClass]="masculino ? 'fondoItem sexoDesactivo' : 'fondoItem'">
+                <div class="contenedor" style="cursor: pointer;" (click)="sexoActivo('femenino')">
+                    <i class="fas fa-venus sexo"></i>
+                    <p>Femenino</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="fondoItem">
+                <div class="contenedor">
+                    <p>Altura</p>
+                    <div class="estiloNum">{{altura}}
+                        <span class="cm">cm</span>
+                    </div>
+
+                    <input type="range" class="form-range" [value]="altura" min="120" max="220" (input)="cambiarAltura($event)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-lg-3 offset-lg-3">
+            <div class="fondoItem">
+                <div class="contenedor">
+                    <p>Peso(Kg)</p>
+                    <div class="estiloNum">{{peso}}</div>
+                    <div>
+                        <i class="fa-solid fa-circle-minus botonRestPlus" (click)="modificarPeso('-')"></i>
+                        <i class="fa-solid fa-circle-plus botonRestPlus" style="margin-left: 2px;" (click)="modificarPeso('+')"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="fondoItem">
+                <div class="contenedor">
+                    <p>Edad</p>
+                    <div class="estiloNum">{{edad}}</div>
+
+                    <div>
+                        <i class="fa-solid fa-circle-minus botonRestPlus" (click)="modificarEdad('-')"></i>
+                        <i class="fa-solid fa-circle-plus botonRestPlus" style="margin-left: 2px;" (click)="modificarEdad('+')"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="col-lg-6 offset-lg-3">
+            <button class="btn btn-lg btn-primary btn-block btnColor" (click)="calcularBMI()">CALCULAR</button>
+        </div>
+    </div>
+</div>
